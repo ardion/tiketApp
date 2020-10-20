@@ -5,6 +5,7 @@ const db = require('./helper/db')
 require('dotenv').config()
 const cors = require('cors')
 const { request, response } = require('express')
+const morgan = require('morgan')
 
 app.use('/uploads', express.static('Uploads'))
 
@@ -18,7 +19,7 @@ app.use('/regis', registerRouter)
 app.use('/order', order)
 app.use('/orderdetail', orderdetail)
 app.use('/payment', payment)
-
+app.use(morgan('dev'))
 app.use(cors())
 
 app.use((request, response, next) => {
