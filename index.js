@@ -1,7 +1,7 @@
 const bodyParser = require('body-parser')
 const express = require('express')
 const app = express()
-const db = require('./helper/db')
+const db = require('./Helper/db')
 require('dotenv').config()
 const cors = require('cors')
 const { request, response } = require('express')
