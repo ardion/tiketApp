@@ -9,7 +9,7 @@ const morgan = require('morgan')
 
 app.use('/uploads', express.static('Uploads'))
 
-const registerRouter = require('./routers/register')
+const registerRouter = require('./Routers/Register')
 const order = require('./Routers/Price')
 const orderdetail = require('./Routers/order')
 const payment = require('./Routers/payment')
