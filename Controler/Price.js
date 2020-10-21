@@ -54,7 +54,8 @@ module.exports = {
 
   getDataPrice: async (request, response) => {
     try {
-      const { order_class, nadult, nchild, city_destination, city_depature, times_flight } = request.body
+      const { order_class, nadult, nchild, city_destination, city_depature, times_flight } = request.query
+      console.log(request.query)
       if (nadult >= 0 && nchild >= 0) {
         passangger = 'adult'
 
